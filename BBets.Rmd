@@ -1,6 +1,6 @@
+
 ---
 title: "BBets"
-author: "Your Name Here"
 author: "Nathaly Ruiz"
 output: html_document
 date: "2024-09-27"
@@ -77,6 +77,25 @@ cat("Standard Deviation of Probabilities:", sd_probs, "\n")
 
 ```
 
+the probability that Dr. J wins is 0.8133
+
+```{r}
+```
+
+
+```{r}
+EV = mean_probs*1*26
+cat("expected profit = ", EV)
+```
+
+
+```{r}
+correctbet = mean_probs/(1-mean_probs)
+cat("correct bet = ", correctbet)
+
+```
+
+
 ```{r}
 hist(probs, main = "Histogram of Probabilities", xlab = "Probability", col = "lightblue", border = "black")
 
@@ -108,6 +127,12 @@ for (i in 1:n_trials) {
   probs[i] <- same_birthday_prob(class_size, n_sim)
 }
 
+cat("probability of win = ", mean(probs))
+
+```
+```{r}
+EV = mean_probs*1*20
+cat("expected profit = ", EV)
 ```
 
 ## mean and std dev 
@@ -123,7 +148,25 @@ cat("Standard Deviation of Probabilities:", sd_probs, "\n")
 
 ```
 
+```{r}
+# Simulation settings
+class_size <- 23
+n_sim <- 1000
+n_trials <- 100
 
+# Vector to store the probabilities from each trial
+probs <- numeric(n_trials)
+
+# Run the simulation 100 times
+for (i in 1:n_trials) {
+  probs[i] <- same_birthday_prob(class_size, n_sim)
+}
+
+cat("probability of win = ", mean(probs))
+
+```
+
+number students for a fair game 1-1 pay off is 23
 
 ### Explanation:
 
