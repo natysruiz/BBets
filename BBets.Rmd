@@ -166,7 +166,7 @@ cat("probability of win = ", mean(probs))
 
 ```
 
-number students for a fair game 1-1 pay off is 23
+number of students for a fair game 1-1 pay off is 23 for the bet to be fair
 
 ### Explanation:
 
