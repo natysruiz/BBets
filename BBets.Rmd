@@ -1,6 +1,7 @@
 ---
 title: "BBets"
 author: "Your Name Here"
+author: "Nathaly Ruiz"
 output: html_document
 date: "2024-09-27"
 ---
